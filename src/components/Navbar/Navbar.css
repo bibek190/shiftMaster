@@ -1,0 +1,27 @@
+.navbar-container {
+  width: 100vw;
+  background-color: rgb(247, 249, 251);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+.logo img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+.list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
