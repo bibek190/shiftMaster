@@ -3,11 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: rgb(61, 130, 233);
+}
+h3 {
+  color: #fd770a;
+}
 .main {
   width: 100vw;
   /* height: 80vh; */
 
-  background-color: #ffffff;
+  background-color: rgba(236, 231, 195, 0.05);
 
   padding: 0 3rem;
 }

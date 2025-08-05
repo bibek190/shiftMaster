@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Navbar = () => {
+  const navbarRef = useRef();
+  useGSAP(() => {
+    gsap.from(navbarRef.current, {
+      y: -100,
+      opacity: 0,
+      duration: 0.8,
+    });
+  });
   return (
-    <div className="navbar-container">
+    <div className="navbar-container" ref={navbarRef}>
       <div className="logo">
         <Link to="/">
           <img src="/shiftm.jpg" alt="logo" />
@@ -12,7 +22,10 @@ const Navbar = () => {
       </div>
       <ul className="list">
         <li>
-          <Link to="/pricing">Pricing</Link>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">Pricing</Link>
         </li>
         <li>
           <Link to="/about">About</Link>

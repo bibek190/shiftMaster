@@ -11,6 +11,10 @@ import Rostering from "./Pages/Rostering/Rostering";
 import CustomerManagement from "./Pages/CustomerManagement/CustomerManagement";
 import Billing from "./Pages/Billing/Billing";
 import Budgeting from "./Pages/Budgeting/Budgeting";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   return (

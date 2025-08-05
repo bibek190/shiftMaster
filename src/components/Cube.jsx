@@ -1,5 +1,6 @@
 import { OrbitControls, useTexture } from "@react-three/drei";
 import React from "react";
+import { BoxGeometry } from "three";
 
 const Cube = () => {
   const texture = useTexture("/shiftm.jpg");
@@ -15,8 +16,8 @@ const Cube = () => {
         color={"yellow"}
       />
 
-      <mesh castShadow>
-        <boxGeometry args={[3, 3, 3]} />
+      <mesh scale={3.2} castShadow>
+        <boxGeometry />
         <meshStandardMaterial map={texture} />
       </mesh>
     </>
