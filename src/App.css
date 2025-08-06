@@ -5,6 +5,7 @@
 }
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
 }
 
 h1 {
@@ -19,5 +20,8 @@ h3 {
 
   background-color: rgba(236, 231, 195, 0.05);
 
-  padding: 0 3rem;
+  padding: 1rem 3rem;
+}
+a {
+  color: rgb(61, 130, 233);
 }

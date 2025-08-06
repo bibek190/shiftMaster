@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import "./Home.css";
-import Cube from "../../components/Cube";
 import { Canvas } from "@react-three/fiber";
 import { Bounds } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Cube from "../../3d/Cube";
 
 const Home = () => {
   const homeRef = useRef();
@@ -24,10 +24,23 @@ const Home = () => {
           <h1>Welcome to Shift Master</h1>
           <h3>Your ultimate solution for workforce management</h3>
           <ul className="home-list">
-            <li>Real-Time Insights</li>
-            <li>Efficient Scheduling</li>
-            <li>Comprehensive Management</li>
-            <li>Simplified Financial Processes</li>
+            <li>
+              <i class="fa-solid fa-circle-check blue-icon"></i>Real-Time
+              Insights
+            </li>
+            <li>
+              {" "}
+              <i class="fa-solid fa-circle-check blue-icon"></i>Efficient
+              Scheduling
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check blue-icon"></i>Comprehensive
+              Management
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check blue-icon"></i>Simplified
+              Financial Processes
+            </li>
           </ul>
         </div>
       </div>
