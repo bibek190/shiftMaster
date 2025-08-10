@@ -1,0 +1,97 @@
+.rostering {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-container {
+  max-width: 800px;
+}
+
+.top-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: rgb(61, 130, 233);
+}
+
+.top-container p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.bottom-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.box {
+  background: linear-gradient(
+    190deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(230, 230, 237, 1) 66%,
+    rgba(61, 130, 233, 0.4) 100%
+  );
+
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.box h2 {
+  font-size: 1.5rem;
+  color: rgb(61, 130, 233);
+
+  margin-bottom: 0.5rem;
+}
+
+.box p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.box ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.box li {
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.box li::before {
+  content: "•";
+  color: #4a90e2;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}

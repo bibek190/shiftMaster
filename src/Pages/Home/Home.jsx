@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Home.css";
-import { Canvas } from "@react-three/fiber";
-import { Bounds } from "@react-three/drei";
+import { Canvas, useThree } from "@react-three/fiber";
+import { Bounds, OrbitControls } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Cube from "../../3d/Cube";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const homeRef = useRef();
@@ -17,38 +18,43 @@ const Home = () => {
     });
   });
 
+  // resize canvas
+  function ResizeFix() {
+    const { gl } = useThree();
+    useEffect(() => {
+      gl.setSize(window.innerWidth, window.innerHeight);
+    }, [gl]);
+    return null;
+  }
+
   return (
     <div className="home">
       <div className="left" ref={homeRef}>
         <div className="left-box">
-          <h1>Welcome to Shift Master</h1>
-          <h3>Your ultimate solution for workforce management</h3>
-          <ul className="home-list">
-            <li>
-              <i class="fa-solid fa-circle-check blue-icon"></i>Real-Time
-              Insights
-            </li>
-            <li>
-              {" "}
-              <i class="fa-solid fa-circle-check blue-icon"></i>Efficient
-              Scheduling
-            </li>
-            <li>
-              <i class="fa-solid fa-circle-check blue-icon"></i>Comprehensive
-              Management
-            </li>
-            <li>
-              <i class="fa-solid fa-circle-check blue-icon"></i>Simplified
-              Financial Processes
-            </li>
-          </ul>
+          <h1>ShiftMaster — The Smarter CRM for NDIS Providers</h1>
+          <h3>
+            Run your NDIS service with less stress and more control. Manage
+            staff, shifts, incidents, invoicing, compliance, and KPIs — all in
+            one easy-to-use platform
+          </h3>
+          <div className="home-links">
+            <NavLink to="/contact" className="demo">
+              <span>👉</span> Book a Free Demo
+            </NavLink>
+            <NavLink to="/about" className="see-work">
+              <span></span> See How it Works
+            </NavLink>
+          </div>
         </div>
       </div>
       <div className="right">
-        <Canvas shadows>
-          <Bounds fit margin={1.2} />
-          <Cube />
-        </Canvas>
+        <div style={{ width: "100%", height: "100%" }}>
+          <Canvas camera={{ position: [0, 0, 5] }}>
+            <OrbitControls autoRotate enableZoom={false} />
+            <Bounds fit margin={1.2} />
+            <Cube />
+          </Canvas>
+        </div>
       </div>
     </div>
   );

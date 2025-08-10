@@ -1,0 +1,94 @@
+#about {
+  margin: 0 -2rem;
+}
+#about p {
+  font-size: 0.9rem;
+}
+
+.about-topic {
+  background-color: rgb(173, 220, 220);
+  padding: 4rem;
+  background: linear-gradient(
+    190deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(230, 230, 237, 1) 66%,
+    rgba(61, 130, 233, 0.4) 100%
+  );
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.about-second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about-mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 350px;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 0;
+}
+/* value */
+.about-value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.value {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  /* margin: 10px; */
+}
+.value-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.value-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+.value-box h2 {
+  color: #fd770a;
+}
+.value-box p {
+  text-align: center;
+}
+
+/* journey */
+.journey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  gap: 1rem;
+}

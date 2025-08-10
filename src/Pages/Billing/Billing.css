@@ -1,0 +1,57 @@
+#billing {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#billing h1,
+h2 {
+  color: rgb(61, 130, 233);
+}
+.billing-topic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.billing-second {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: 2rem;
+}
+
+.billing-box {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  background-color: rgb(162, 220, 217, 0.09);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 1rem;
+}
+
+.billing-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.billing-box ul {
+  list-style: none;
+}
+.billing-box ul li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.billing-box ul li::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f164";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgb(61, 130, 233);
+
+  font-size: 1rem;
+  line-height: 1;
+}

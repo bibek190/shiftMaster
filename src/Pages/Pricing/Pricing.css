@@ -1,55 +1,99 @@
 .pricing-container {
-  /* height: 90vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 2rem 1rem;
 }
+
 .pricing-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 1.5rem;
   text-align: center;
 }
+.pricing-title h1 {
+  color: #1a237e;
+  font-weight: 700;
+}
 .muted {
   color: rgb(117, 126, 128);
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
 }
 
 .price-container {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  align-items: stretch;
+  gap: 3rem;
   flex-wrap: wrap;
-  padding-top: 1rem;
 }
+
 .price-card {
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 1rem;
-  padding: 2rem;
-  /* border: 2px solid red; */
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 5px;
+  overflow: hidden;
 }
+
 .price-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
-.price-card h2 {
-  color: rgb(61, 130, 233);
+.price-card h4 {
+  color: rgb(23, 81, 23);
+}
+
+.card-topic {
+  width: 100%;
+  padding: 1.5rem;
+  min-height: 240px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #cbcae2;
+  padding: 2rem;
+}
+.card-topic h3 {
+  color: #0f172a;
+}
+
+/* silver,gold,platinum */
+.silver {
+  background: linear-gradient(180deg, #f5f5f7 0%, #e5e7eb 100%);
+}
+.gold {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+.platinum {
+  background: linear-gradient(135deg, #2c71df 0%, #8195c4 50%);
+  color: #f1f5f9;
+}
+.platinum h2 {
+  color: white;
 }
 
 .gradient-button {
   background: linear-gradient(45deg, #ff6ec4, #7873f5);
   border: none;
   color: white;
+  align-self: center;
+  margin-bottom: 10px;
 }
 
 .gradient-button:hover {
@@ -63,6 +107,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  padding: 1rem;
 }
 
 .tick-list li {
@@ -72,13 +117,13 @@
 }
 
 .tick-list li::before {
-  content: "✅";
+  content: "✅ ";
   position: absolute;
   left: 0;
   top: 0;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1;
-  color: blue;
+  margin-top: 2px;
 }
 
 .pricing-message {

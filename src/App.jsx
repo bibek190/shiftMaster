@@ -13,16 +13,20 @@ import Billing from "./Pages/Billing/Billing";
 import Budgeting from "./Pages/Budgeting/Budgeting";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import Feature from "./Pages/Feature/Feature";
+import LandingPage from "./components/LandingPage/LandingPage";
+import ToTop from "./components/ToTop";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   return (
     <div>
+      <ToTop />
       <Navbar />
       <div className="main">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
@@ -30,6 +34,7 @@ const App = () => {
           <Route path="/costumermanagement" element={<CustomerManagement />} />
           <Route path="/billing" element={<Billing />} />
           <Route path="/budgeting" element={<Budgeting />} />
+          <Route path="/feature" element={<Feature />} />
         </Routes>
       </div>
       <Footer />

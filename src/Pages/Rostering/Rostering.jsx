@@ -1,5 +1,10 @@
 import React from "react";
 import "./Rostering.css";
+import { MdConnectWithoutContact } from "react-icons/md";
+import { FaRegNoteSticky } from "react-icons/fa6";
+import { SiStreamrunners } from "react-icons/si";
+import { GiEmptyHourglass } from "react-icons/gi";
+import { IoFileTrayFull } from "react-icons/io5";
 
 const Rostering = () => {
   return (
@@ -13,6 +18,8 @@ const Rostering = () => {
       </div>
       <div className="bottom-container">
         <div className="box">
+          <MdConnectWithoutContact size={40} color="#6dbfb8" />
+
           <h2>Skill Matching</h2>
           <p>
             Assign the best team member to every customer based on
@@ -33,6 +40,7 @@ const Rostering = () => {
           </ul>
         </div>
         <div className="box">
+          <FaRegNoteSticky size={40} color="purple" />
           <h2>Take Notes on the Go</h2>
           <p>
             Prompt your team to record shift notes, incidents, and tag goals
@@ -41,6 +49,7 @@ const Rostering = () => {
           </p>
         </div>
         <div className="box">
+          <SiStreamrunners size={40} color="green" />
           <h2>Streamlined Scheduling for Complex Needs</h2>
           <p>
             Optimize scheduling for complex or group sessions by deliberately
@@ -50,7 +59,10 @@ const Rostering = () => {
           </p>
         </div>
         <div className="box">
+          <GiEmptyHourglass size={40} color="orangered" />
+
           <h2>Availability and Scheduling</h2>
+
           <p>
             Take the guesswork out of assigning shifts by syncing team
             availability, scheduled leave, and other preferences with
@@ -72,6 +84,7 @@ const Rostering = () => {
           </ul>
         </div>
         <div className="box">
+          <IoFileTrayFull size={40} color="brown" />
           <h2>Fill Gaps Easily</h2>
           <p>
             Quickly address staffing gaps by publishing open shifts to an

@@ -6,7 +6,7 @@ const Cube = () => {
   const texture = useTexture("/shiftm.jpg");
   return (
     <>
-      <OrbitControls autoRotate />
+      <OrbitControls autoRotate enableZoom={false} />
       <ambientLight intensity={1.5} />
 
       <directionalLight
