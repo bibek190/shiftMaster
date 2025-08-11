@@ -7,13 +7,14 @@ const Cube = () => {
   return (
     <>
       <OrbitControls autoRotate enableZoom={false} />
+
       <ambientLight intensity={1.5} />
 
       <directionalLight
         position={[0, 1, 1]}
         castShadow
         intensity={1}
-        color={"yellow"}
+        color={"red"}
       />
 
       <mesh scale={3.2} castShadow>

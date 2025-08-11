@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Footer.css";
 import {
   FaFacebook,
@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="footer-container">
         <p>© 2025 Template. Design by ShiftMaster</p>
         <p>
-          <Link>Terms & Conditions</Link>
+          <Link to="./privacyPolicy.tsx">Terms & Conditions</Link>
         </p>
         <div className="footer-content">
           <div className="footer-title">
@@ -39,10 +39,10 @@ const Footer = () => {
                 <Link>Customers</Link>
               </li>
               <li>
-                <Link>About Us</Link>
+                <Link to="../../Pages/About/About.jsx">About Us</Link>
               </li>
               <li>
-                <Link>Contact Us</Link>
+                <Link to="../../Pages/Contact/Contact.jsx">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -78,11 +78,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-icons">
-          <FaFacebook style={{ margin: "0 30px" }} size={24} />
-          <FaYoutube style={{ margin: "0  30px" }} size={24} />
-          <FaLinkedin style={{ margin: "0 30px" }} size={24} />
-          <FaInstagram style={{ margin: "0 30px" }} size={24} />
-          <FaTiktok style={{ margin: "0 30px" }} size={24} />
+          <NavLink
+            to={
+              "https://www.linkedin.com/company/vision-software-pty-ltd/posts/?feedView=all"
+            }
+          >
+            <FaLinkedin style={{ margin: "0 30px" }} size={24} />
+          </NavLink>
         </div>
       </div>
     </div>

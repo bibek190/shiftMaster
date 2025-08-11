@@ -50,7 +50,6 @@ const Home = () => {
       <div className="right">
         <div style={{ width: "100%", height: "100%" }}>
           <Canvas camera={{ position: [0, 0, 5] }}>
-            <OrbitControls autoRotate enableZoom={false} />
             <Bounds fit margin={1.2} />
             <Cube />
           </Canvas>
